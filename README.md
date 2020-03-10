@@ -3,12 +3,13 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false, unique: true|
-|user|string|null: false,unique: true|
+|name|string|null: false,unique: true|
 ### Association
-- has_many :chat_spaces
+- has_many :messsages
 - has_many :groups_users
-- has_many :groups,through: group_users
+- has_many :groups,through: groups_users
 
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -23,7 +24,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |group|referense|null: false,foreign_key:true|
-|user|string|null: false,foreign_key:true|
+|user|referense|null: false,foreign_key:true|
 ### Association
 - belong_to :group
 - belong-to :user
@@ -34,6 +35,6 @@
 |------|----|-------|
 |name|string|null: false,unique:true|
 ### Association
-- has_many:group_users|
+- has_many:groups_users|
 - has_many:users,through: groups_users|
 - has_many:messages|
