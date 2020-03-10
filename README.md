@@ -9,7 +9,6 @@
 - has_many :groups_users
 - has_many :groups,through: group_users
 
-## chat-spacesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -18,7 +17,7 @@
 |user|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :group
+- belongs_to :group
 
 ## groups_usersテーブル
 |Column|Type|Options|
@@ -33,7 +32,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group-name|string|null: false,unique:true|
+|name|string|null: false,unique:true|
 ### Association
 - has_many:group_users|
 - has_many:users,through: groups_users|
