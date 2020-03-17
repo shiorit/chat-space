@@ -1,0 +1,32 @@
+.wrapper
+  .sideleft-all
+    .headerleft
+      .headerleft__box
+        %p.headerleft__box__user-name
+          ユーザー名
+        %ul.headerleft__box__menu
+          %li.headerleft__box__menu__new
+          = link_to "#" do            
+            = icon('fa','edit')
+            %span<>
+          %li.headerleft__box__menu__edit
+          = link_to "#" do
+            = icon('fa','cog')
+            %span<>
+    
+    .groups
+      = link_to "#" , class: "group" do
+        %p.group__group-name
+          グループ名
+        %p.group__group-mess
+          メッセージなし
+      = link_to "#" , class: "group" do
+        %p.group__group-name
+          グループ名
+        %p.group__group-mess
+          メッセージなし
+      = link_to "#" , class: "group" do
+        %p.group__group-name
+          グループ名
+        %p.group__group-mess
+          メッセージなし
