@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  .wrapper {
+    display: flex;
+    height: 100vh;
+    // 左側 
+    .sideleft-all {
+      width: 300px;
+      background-color: #2f3e51;
+      height: 100vh;
+      float: left;
+      //headerleft枠
+     .headerleft {
+        width: 300px;
+        height: 100px;
+        background-color: #253141;
+        display: flex;
+        align-items: center;
+        //headerleft内箱//
+        &__box {
+          width: 260px;
+          height: 20px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+          //headerleft内、本人ユーザー名
+          &__user-name {
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            line-height: center;
+          } 
+          //本人ユーザー名の隣のアイコン
+          ul{
+            width: 60px;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+          } 
+          i {
+            color: #ffffff;
+            margin-right: 5px;
+          }
+        }
+      }
+      // 左側グループ
+      .groups {
+        height: calc(100vh - 100px);
+        padding: 20px 20px 0;
+        box-sizing: border-box;
+        .group{
+          color: #ffffff;
+          text-decoration: none;
+          p.group__group-name {
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+          }
+          p.group__group-mess {
+            font-size: 11px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+    // chat main側 
+    .chat-main {
+      height: 100vh;
+      width: calc(100vw - 300px);
+      background-color: #fafafa;
+      float: right;
+      &__header {
+        width: calc(100vw - 300px);
+        height: 100px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #eeeeee;
+        //main headerの中
+        &__group {
+          width: calc(100vw - 300px - 80px);
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          // main headerのグループ名欄
+          .groupname{
+            h1 {
+              font-size: 20px;
+              color: #333333;
+              margin-top: 35px;
+              margin-bottom: 15px;
+            }
+            ul {
+              font-size: 12px;
+              color: #999999;
+              display: flex;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              .member-name {
+                text-decoration: none;
+                margin-left: 5px;
+                color: #999999;
+              }
+            }
+          }
+          // main header側 groupのeditボタン
+          .main__header__edit-btn{
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            margin-top: 28px;
+            border: solid 1px #38aef0
+          }
+            a {
+              text-decoration: none;
+              color: #38aef0;
+            }
+        }
+      }
+    // messagesの中
+    .messages {
+      height: calc(100vh - 100px - 90px);
+      width : calc(100vh - 300px);
+      background-color: #fafafa;
+      padding: 46px 40px;
+      .message {
+        padding-bottom: 46px;
+        &__info{
+          margin-bottom:12px;
+          display: flex;
+          &__who {
+            color: #333333;
+            font-size: 16px;
+          }
+          &__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+          &__text{
+            color: #434A54;
+            font-size: 14px;
+            margin-bottom: 12px;
+          }
+      }
+    }
+    
+    
+
+    .form {
+      height: 90px;
+      background-color: #d2d2d2;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      &__message {
+        width: 900px;
+        height: 50px;
+        border: none;
+        float: left;
+      }
+      &__mask {
+        height: 50px;
+        background-color: #ffffff;
+        float: left;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .kakusu {
+          display: none;
+        }
+      }
+      &__submit {
+        height: 50px;
+        color: #ffffff;
+        background-color: #38aef0;
+        font-size: 16px;
+        float: right;
+        margin-left: 15px;
+        padding: 0 30px;
+      } 
+    }
+  }
+}
+}
