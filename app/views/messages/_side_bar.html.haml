@@ -7,8 +7,8 @@
           = current_user.name
         %ul.header__box__menu 
           %li.headerleft__box__menu__new
-          = link_to "#" do
-            = icon('fa','edit')
+          = link_to new_group_path do
+            = icon('fa','edit', class: 'icon')
             %span<>
           %li.headerleft__box__menu__edit
           = link_to edit_user_path(current_user) do
@@ -16,18 +16,11 @@
             %span<>
     
     .groups
-      = link_to "#" , class: "group" do
-        %p.group__group-name
-          グループ名
-        %p.group__group-mess
-          メッセージなし
-      = link_to "#" , class: "group" do
-        %p.group__group-name
-          グループ名
-        %p.group__group-mess
-          メッセージなし
-      = link_to "#" , class: "group" do
-        %p.group__group-name
-          グループ名
-        %p.group__group-mess
-          メッセージなし
+      - current_user.groups.each do |group|
+        .group
+          = link_to group_path(group) do
+            .group__name
+              = group.name
+            .group__message
+              メッセージはありません
+    
